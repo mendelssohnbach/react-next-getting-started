@@ -1,10 +1,8 @@
-const Rect = (props) => {
-  const x = props.x;
-  const y = props.y;
-  const width = props.w;
-  const height = props.h;
-  const color = props.c;
-  const radius = props.r;
+const Rect = ({ x, y, w, h, c, r }) => {
+  const width = w;
+  const height = h;
+  const color = c;
+  const radius = r;
 
   const rectStyle = {
     backgroundColor: color,
