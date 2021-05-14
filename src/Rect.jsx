@@ -1,35 +1,22 @@
-import { Component } from 'react';
+const Rect = (props) => {
+  const x = props.x;
+  const y = props.y;
+  const width = props.w;
+  const height = props.h;
+  const color = props.c;
+  const radius = props.r;
 
-class Rect extends Component {
-  x = 0;
-  y = 0;
-  width = 0;
-  height = 0;
-  color = 'white';
-  style = {};
+  const rectStyle = {
+    backgroundColor: color,
+    position: 'absolute',
+    left: x + 'px',
+    top: y + 'px',
+    width: width + 'px',
+    height: height + 'px',
+    borderRadius: radius + 'px',
+  };
 
-  constructor(props) {
-    super(props);
-    this.x = props.x;
-    this.y = props.y;
-    this.width = props.w;
-    this.height = props.h;
-    this.color = props.c;
-    this.radius = props.r;
-    this.style = {
-      backgroundColor: this.color,
-      position: 'absolute',
-      left: this.x + 'px',
-      top: this.y + 'px',
-      width: this.width + 'px',
-      height: this.height + 'px',
-      borderRadius: this.radius + 'px',
-    };
-  }
-
-  render() {
-    return <div style={this.style}></div>;
-  }
-}
+  return <div style={rectStyle}></div>;
+};
 
 export default Rect;
