@@ -14,3 +14,25 @@
 ## setState
 
 値を追加するだけ。削除はされない。 `setState` 関数に変更したい値を代入する。
+
+以下のコードにはバグがあります。
+
+```javascript
+const App = (props) => {
+  const [count, setCount] = useState(0);
+
+  const timer = setInterval(() => {
+    // setCount(count + 1);
+  }, 5000);
+  ...
+  return (
+    ...
+        <p className="alert alert-warning">
+          {msg}: {timer}
+        </p>
+```
+
+`timer` 関数内の指定秒数でレンダリングが発生。
+`p` エレメントの表示でレンダリングが発生。
+状態が変化するので再度、`state` がレンダリング発火。
+
