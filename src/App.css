@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+/* 書籍コード */
+h1 {
+  text-align: right;
+  padding: 0 50px 10px 50px;
+  margin: 0 0 10px 0;
+}
+
+.subtitle {
+  margin: 20px 0;
+  color: #999;
+  font-weight: bold;
+  font-size: 24pt;
+}
+
+p {
+  margin: 6px 0;
+  color: #666;
+  font-size: 16pt;
+}
