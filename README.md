@@ -36,3 +36,16 @@ const App = (props) => {
 `p` エレメントの表示でレンダリングが発生。
 状態が変化するので再度、`state` がレンダリング発火。
 
+## ステートで表示を切り替える
+
+**P170**
+
+`doAction()` メソッドの引数 `e` の目的が不明。下記のコードはどちらでも操作した。
+
+```
+  doAction(e) {
+    // doAction() {
+  ...
+            <button onClick={this.doAction}>
+```
+
