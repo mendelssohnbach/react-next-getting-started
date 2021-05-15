@@ -1,25 +1,50 @@
-import { useState } from 'react';
+import React from 'react';
+import './App.css';
 
-const App = () => {
-  const [counter, setCounter] = useState(0);
-
-  function doAction() {
-    setCounter(() => counter + 1);
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      counter: 0,
+      msg: 'count start!',
+      flg: true,
+    };
+    this.doAction = this.doAction.bind(this);
   }
 
-  return (
-    <div>
-      <h1 className="bg-primary text-white display-4">React</h1>
-      <div className="container">
-        <div className="alert alert-primary text-center">
-          <p className="h5 mb-4">{`*** count: ${counter} ***`}</p>
-          <button className="btn btn-primary" onClick={doAction}>
-            Click
-          </button>
+  doAction(e) {
+    // doAction() {
+    this.setState({
+      counter: this.state.counter + 1,
+      msg: this.state.counter,
+      flg: !this.state.flg,
+    });
+  }
+
+  render() {
+    return (
+      <div>
+        <h1 className="bg-primary text-white display-4">React</h1>
+        <div className="container">
+          <p className="subtitle">Count number</p>
+          {this.state.flg ? (
+            <div className="alert alert-primary text-right">
+              <p className="h5">count: {this.state.msg}</p>
+            </div>
+          ) : (
+            <div className="alert alert-warning  text-left">
+              <p className="h5">{this.state.msg}です。</p>
+            </div>
+          )}
+          <div className="text-center">
+            <button className="btn btn-primary" onClick={this.doAction}>
+              Click
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 export default App;
