@@ -55,3 +55,21 @@ const App = (props) => {
             <button onClick={this.doAction}>
 ```
 
+関数コンポーネントでの実装は [ステートフックの利用法](https://ja.reactjs.org/docs/hooks-state.html) を参考にした。
+
+```
+const [counter, setCounter] = useState(0);
+...
+{counter % 2 === 0 ? (
+  <div className="alert alert-primary text-left">
+    <p className="h5">{counter}です。</p>
+  </div>
+) : (
+  <div className="alert alert-primary text-right">
+    <p className="h5">count: {counter}</p>
+  </div>
+)}
+<button className="btn btn-primary" onClick={() => setCounter(counter + 1)}>
+  Click
+)}
+```
