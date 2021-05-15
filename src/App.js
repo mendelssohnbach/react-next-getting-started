@@ -4,9 +4,9 @@ import './App.css';
 class App extends React.Component {
   input = '';
 
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
 
   render() {
     return (
