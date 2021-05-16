@@ -1,13 +1,7 @@
 import { useState, useEffect } from 'react';
+import AlertMessage from '../src/components/AlertMessage';
+import Header from './components/Header';
 import './App.css';
-
-function AlertMessage(props) {
-  return (
-    <div className="alert alert-primary h5 text-primary">
-      <h5>{props.msg}</h5>
-    </div>
-  );
-}
 
 function App() {
   const [val, setVal] = useState(0);
@@ -27,7 +21,7 @@ function App() {
 
   return (
     <div>
-      <h1 className="bg-primary text-white display-4">React</h1>
+      <Header />
       <div className="container">
         <h4 className="my-3">Hooks sample</h4>
         <AlertMessage msg={msg} />
