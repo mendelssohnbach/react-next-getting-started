@@ -22,7 +22,7 @@ function App() {
   };
 
   const doAction = () => {
-    let res = (
+    const res = (
       <div>
         <p>軽減税率(8%) : {tax1} 円</p>
         <p>軽減税率(10%) : {tax2} 円</p>
