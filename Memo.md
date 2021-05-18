@@ -90,3 +90,9 @@ const [counter, setCounter] = useState(0);
 - 変数の値は、関数コンポーネントでは保持されない
 - 関数コンポーネントは一時記憶、メモリを保持しない
 
+## ローカルストレージ
+
+`window` オブジェクトは省略可能
+
+- 指定のキーから値を取得: `変数 = window.localStorage.getItem(キー);
+- 値を指定のキーで保管: `window.localStorage.setItem(キー, 値)`
