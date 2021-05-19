@@ -12,7 +12,6 @@ const MemoPage = () => {
         {/* FindForm */}
         {/* DelForm */}
       </div>
-      {/* Memo */}
       <Memo />
     </div>
   );

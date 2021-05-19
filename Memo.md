@@ -126,3 +126,13 @@ const [counter, setCounter] = useState(0);
 ```
 import Child './components/Child'
 ```
+
+## Error
+
+`<Memo />` コンポーネントを組み込んだら以下のエラーが発生した。
+
+```
+Error: Too many re-renders. React limits the number of renders to prevent an infinite loop.
+
+和訳:エラー：再レンダリングが多すぎます。 Reactは、無限ループを防ぐためにレンダリングの数を制限します。
+```
