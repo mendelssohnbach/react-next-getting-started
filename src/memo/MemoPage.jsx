@@ -1,4 +1,5 @@
 import usePersist from '../Persist';
+import Memo from './Memo';
 
 const MemoPage = () => {
   const [mode, setMode] = usePersist('mode', 'default');
@@ -12,6 +13,7 @@ const MemoPage = () => {
         {/* DelForm */}
       </div>
       {/* Memo */}
+      <Memo />
     </div>
   );
 };
