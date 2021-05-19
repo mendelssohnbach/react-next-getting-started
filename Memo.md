@@ -113,8 +113,16 @@ const [counter, setCounter] = useState(0);
 
 |||
 |---|---|
-|memo|メモのデータ(message, created)|
+|memo|メモのデータ (message, created)|
 |findMemo|検索したメモをまとめておく|
 |mode|行った操作を表す値|
 
+## プロジェクトディレクトリについて
 
+プロジェクトディレクトリがカレントディレクトリとなる。 `.` と表記する
+
+たとえば、プロジェクトディレクトリ内に `components` ディレクトリが存在し、その中に `Child.jsx` を置いた場合の `App.js` のインポート表記は以下になる。
+
+```
+import Child './components/Child'
+```
