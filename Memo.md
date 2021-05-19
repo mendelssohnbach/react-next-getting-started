@@ -96,3 +96,25 @@ const [counter, setCounter] = useState(0);
 
 - 指定のキーから値を取得: `変数 = window.localStorage.getItem(キー);
 - 値を指定のキーで保管: `window.localStorage.setItem(キー, 値)`
+
+## メモアプリの構成
+
+- ベースコンポーネント
+-- `index.js`: 既存のコンポーネントを再利用
+-- `App.js`; 既存のコンポーネントを再利用
+-- `Persist.js`: リスト4-19を再利用
+
+- 新たに作るコンポーネント
+-- `MemoPage.jsx`: メモとフォーム類をまとめて表示する
+-- `Memo.js`, `Item.js`: メモ表示とメモの各項目を表示
+-- `AddForm.jsx`, `FindForm.jsx`, `DelForm.jsx`: メモの作成、検索、削除を担当
+
+### メモの後続
+
+|||
+|---|---|
+|memo|メモのデータ(message, created)|
+|findMemo|検索したメモをまとめておく|
+|mode|行った操作を表す値|
+
+
