@@ -136,3 +136,5 @@ Error: Too many re-renders. React limits the number of renders to prevent an inf
 
 和訳:エラー：再レンダリングが多すぎます。 Reactは、無限ループを防ぐためにレンダリングの数を制限します。
 ```
+
+応急対策として `Memo.jsx` の `setMode('default');` をコメント処理した。

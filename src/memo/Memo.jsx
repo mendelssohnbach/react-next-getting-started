@@ -1,4 +1,3 @@
-// import { useState, useEffect } from 'react';
 import usePersist from '../Persist';
 import Item from './Item';
 
@@ -12,7 +11,7 @@ const Memo = (props) => {
   switch (mode) {
     case 'default':
       data = memo.map((value, key) => <Item key={value.message} value={value} index={key + 1} />);
-      setMode('default');
+      // setMode('default');
       break;
 
     case 'find':
