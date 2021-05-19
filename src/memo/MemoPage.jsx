@@ -1,4 +1,5 @@
 import usePersist from '../Persist';
+import AddForm from './AddForm';
 import Memo from './Memo';
 
 const MemoPage = () => {
@@ -8,7 +9,7 @@ const MemoPage = () => {
     <div>
       <h5 className="my-3">mode: {mode}</h5>
       <div className="alert alert-primary pd-0">
-        {/* AddForm */}
+        <AddForm />
         {/* FindForm */}
         {/* DelForm */}
       </div>
