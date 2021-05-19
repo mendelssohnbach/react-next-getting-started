@@ -1,8 +1,21 @@
-const Item = () => {
+const Item = (props) => {
+  const th = {
+    width: '100px',
+  };
+  const td = {
+    textAlign: 'right',
+    width: '150px',
+  };
+
+  const d = new Date(Date.parse(props.value.created));
+  let f = d.getMonth() + '/' + d.getDate() + ' ' + d.getHours() + ':' + d.getMinutes();
+
   return (
-    <div>
-      <p>This is item.</p>
-    </div>
+    <tr>
+      <th style={th}>No, {props.index}</th>
+      <td>{props.value.message}</td>
+      <td style={td}>{f}</td>
+    </tr>
   );
 };
 
