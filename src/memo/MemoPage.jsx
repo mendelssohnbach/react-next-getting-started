@@ -1,5 +1,6 @@
 import usePersist from '../Persist';
 import AddForm from './AddForm';
+import DelForm from './DelForm';
 import Memo from './Memo';
 
 const MemoPage = () => {
@@ -11,7 +12,7 @@ const MemoPage = () => {
       <div className="alert alert-primary pd-0">
         <AddForm />
         {/* FindForm */}
-        {/* DelForm */}
+        <DelForm />
       </div>
       <Memo />
     </div>
